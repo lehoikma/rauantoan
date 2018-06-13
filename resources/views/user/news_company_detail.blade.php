@@ -28,7 +28,7 @@
     <div class="red-more">
         <h4 style="padding: 10px 0px;">BÀI CÙNG CHUYÊN MỤC</h4>
         @foreach($newsCompanyFollow as $value)
-        <div class="single-post" style="float: left;width: 31%;margin: 0 2% 0 0;margin-bottom: 30px;overflow-x: hidden;">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 single-post" style="margin-bottom: 30px;overflow-x: hidden;">
             <div class="post-thumb">
                 <a href="{{route('detail_news_company',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
                     <img style="width: 100%; height: 130px"src="/upload/{{$value['image']}}" alt="" title="{{$value['title']}}">

@@ -44,6 +44,12 @@
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+    .item-news-custom {
+        padding-top: 15px;
+    }
+    .image img {
+        width: 100% !important;
+    }
 }
 .custom-container {
     max-width: 1070px;

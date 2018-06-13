@@ -25,7 +25,7 @@ class NewsCompanyController extends Controller
     public function detail($title, $id)
     {
         $newsCompany = NewsCompany::find($id);
-        $newsCompanyFollow = NewsCompany::all()->all(3);
+        $newsCompanyFollow = NewsCompany::limit(3)->get();
         return view('user.news_company_detail', [
             'newsCompany' => $newsCompany,
             'newsCompanyFollow' => $newsCompanyFollow

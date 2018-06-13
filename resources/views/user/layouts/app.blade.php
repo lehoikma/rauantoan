@@ -92,7 +92,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="custom-container" style="width: 100%">
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 content-custom" style="padding: 0px">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 content-custom" style="padding-left: 0px">
             @yield('content')
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">

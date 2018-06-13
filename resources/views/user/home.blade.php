@@ -10,7 +10,7 @@
             </div>
         </div>
         <div style="margin-top: 20px">
-            <div class="" style="width: 50%; float: left">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="">
                 <a href="{{route('news_detail',['title' => str_slug($newsFirst['title'], '-'),'id' => $newsFirst['id']])}}">
                     <img style="width: 100%" src="upload/{{$newsFirst['image']}}" alt="" title="{{$newsFirst['title']}}">
                 </a>
@@ -29,7 +29,7 @@
                     <div style="margin-top: 10px">{{ strip_tags(substr($newsFirst['content'], 0,150)) }} ...</div>
                 </div>
             </div>
-            <div class="" style="width: 50%; float: left; padding-left: 20px;">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 item-news-custom" style="padding-left: 20px;">
                 @foreach($newsList as $key => $value)
                     @if($key == 0)
                         @continue
@@ -69,7 +69,7 @@
             </div>
         </div>
         @foreach($newsCompany as $key=>$valueNewCompany)
-            <div class="" style="width: 30%; margin-top: 20px; margin-right:23px ; float: left">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
                         <a class="thumb-zoom" href="{{route('detail_news_company',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}">
@@ -102,7 +102,7 @@
             </div>
         </div>
         @foreach($newsFarm as $key => $valueNewsFarm)
-            <div class="" style="width: 30%; margin-top: 20px; margin-right:23px ; float: left">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
                         <a class="thumb-zoom" href="{{route('detail_news_farm',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" title="{{$valueNewsFarm['title']}}">
@@ -122,9 +122,6 @@
                     </div>
                 </div>
             </div>
-            @if(($key+1)%3 == 0)
-                <div class="clearfix"></div>
-            @endif
         @endforeach
     </div>
 
