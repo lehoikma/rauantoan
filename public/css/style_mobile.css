@@ -1,0 +1,12 @@
+#mobile-product-content img{
+    width: 100% !important;
+    height: auto !important;
+}
+
+.mobile-title iframe {
+    width: 100%;
+}
+
+#mobile-product-content iframe {
+    width: 100%;
+}
