@@ -18,81 +18,84 @@
 <div class="page">
     <div class="header">
         <div class="logo" style="background: #8fcc6d">
-            <div class="custom-container">
+            <div class="custom-container custom-container1">
                 <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="275" height="150" src="/image/logo1.png" class="custom-logo" alt="logo-f" itemprop="logo" style="    margin: 10px 0px;"></a>
             </div>
         </div>
 
         <div class="custom-container" style="padding-top: 5px">
+            <nav role="navigation" class="navbar navbar-default" style="    margin-bottom: 0px;">
+                <div class="container top_nav">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <button data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                                <span class="sr-only">Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="myNavbar" class="navbar-collapse noPadding collapse" style="height: 1px;">
+                            <div class="menustyle _lg_fr">
+                                <ul id="primary-menu1" class="nav navbar-nav  sm menu-custom" data-smartmenus-id="1526812798300609"
+                                    style="font-size: 14px !important;;font-weight: 700;list-style: none; position: relative;">
+                                    <li class="menu-active">
+                                        <a class="menu-active" href="{{route('home')}}">Trang chủ</a>
+                                    </li>
 
-            <div class="nav-wrapper" style="float: left;width: 100%;background: #f6f6f6;border: 1px solid #d9d8d8;">
+                                    <li class="menu-active">
+                                        <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
+                                        <ul class="sub-menu" style="padding: 0px">
+                                            <li>
+                                                <a class="" href="{{route('list_news_farms')}}" style="border: none">Tin Nông Nghiệp</a>
+                                            </li>
+                                            <li>
+                                                <a class="" href="{{route('list_news_company')}}" style="border: none">Tin Doanh Nghiệp</a>
+                                            </li>
+                                        </ul>
+                                    </li>
 
-                <div class="menu-menu-1-container">
-                    <button data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle" type="button" aria-expanded="true" style="background: red">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <ul id="primary-menu" class="menu menu-custom" style="list-style: none; position: relative;">
-                        <li>
-                            <a class="menu-active" href="{{route('home')}}">Trang chủ</a>
-                        </li>
-                        <li>
-                            <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
-                            <span class="sub-toggle"> <i class="fa fa-angle-right"></i>
-                                </span>
-                        </li>
-                        <li>
-                            <?php
-                                $categoryProduct = \App\Models\CategoriesProduct::all();
-                            ?>
-                            <a class="menu-active" href="{{route('list_news_products')}}">Sản Phẩm</a>
-                            <ul class="sub-menu" style="padding: 0px">
-                                @foreach($categoryProduct as $value)
-                                <li>
-                                    <a href="{{route('list_news_products_category', $value['id'])}}" style="border: none">
-                                        {{$value['name']}}
-                                    </a>
-                                </li><br>
-                                @endforeach
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="menu-active" href="{{route('list_news_farms')}}">Tin Nông Nghiệp</a>
-                            <span class="sub-toggle"> <i class="fa fa-angle-right"></i>
-                                </span>
-                        </li>
-                        <li>
-                            <a class="menu-active" href="{{route('list_news_company')}}">Tin Doanh Nghiệp</a>
+                                    <li class="menu-active">
+                                        <a class="menu-active" href="{{route('list_news_products')}}">Sản Phẩm</a>
+                                        <?php
+                                        $categoryProduct = \App\Models\CategoriesProduct::all();
+                                        ?>
+                                        <ul class="sub-menu" style="padding: 0px">
+                                            @foreach($categoryProduct as $value)
+                                                <li>
+                                                    <a href="{{route('list_news_products_category', $value['id'])}}" style="border: none">
+                                                        {{$value['name']}}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
 
-                            <span class="sub-toggle"> <i class="fa fa-angle-right"></i> </span>
-                        </li>
-                        <li>
-                            <a class="menu-active" href="{{route('videos')}}">Video</a>
-                            <span class="sub-toggle"> <i class="fa fa-angle-right"></i>
-                                </span>
-                        </li>
-                        <li><a class="menu-active" href="{{route('list_image')}}">Hình Ảnh</a></li>
-                        <li><a class="menu-active" href="{{route('form_support')}}">Tư vấn </a></li>
-                        <!--<li style="float: right;">-->
-                        <!--    <a href="#" style="border: none">-->
-                        <!--        <span class="glyphicon glyphicon-search"></span>-->
-                        <!--    </a></li>-->
-                    </ul>
+                                    <li class="menu-active">
+                                        <a class="" href="{{route('videos')}}">Video</a>
+                                    </li>
+                                    <li class="menu-active">
+                                        <a class="menu-active" href="{{route('list_image')}}">Hình Ảnh</a>
+                                    </li>
+                                    <li class="menu-active">
+                                        <a class="menu-active" href="{{route('form_support')}}">Tư vấn </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div><!-- .nav-wrapper -->
-
+            </nav>
             </nav><!-- #site-navigation -->
 
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="custom-container" style="width: 100%">
-        <div class="" style="width: 65%; float: left">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 content-custom" style="padding: 0px">
             @yield('content')
         </div>
-        <div class="" style="width: 30%; float: right">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="tin-tuc-title" style=" padding: 8px 16px; padding-left: 0px">
                 <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Sản Phẩm</button>
             </div>
@@ -160,19 +163,14 @@
     </div>
 </div>
 <script>
-//  $('a.menu-active').click(function(){
-//    $('a.menu-active').removeClass("active");
-//    $(this).addClass("active");
-//  });
-
   $(function() {
-    var href = window.location.href;
-    $('a.menu-active').each(function(e,i) {
-      if (href.indexOf($(this).attr('href')) >= 0) {
-        $('a.active').removeClass('active');
-        $(this).addClass('active');
-      }
-    });
+      var href = window.location.href;
+      $('li.menu-active a').each(function(e,i) {
+          if (href.indexOf($(this).attr('href')) >= 0) {
+              $('li.menu-active').removeClass('active');
+              $(this).parent().addClass('active');
+          }
+      });
   });
 </script>
 </body>
