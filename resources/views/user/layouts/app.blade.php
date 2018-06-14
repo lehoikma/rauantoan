@@ -109,7 +109,7 @@
                             <img src="/upload/{{$product['image']}}" style="width: 100%">
                         </a>
                     </div>
-                    <div class="post-caption clearfix" style="width: 65%; float: left; margin-left: 15px;">
+                    <div class="post-caption clearfix" style="width: 65%; float: left; margin-left: 10px;">
                         <h4 class="small-font" style="font-size: 14px; font-weight: 500; margin-top: 0px;">
                             <a href="{{route('detail_news_products',['title' => str_slug($product['title'], '-'),'id' => $product['id']])}}" style="color: #333">
                                {{$product['title']}}
