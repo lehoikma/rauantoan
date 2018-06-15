@@ -50,6 +50,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
     Route::get('/xoa-tin-tuc-nha-nong/{id}', 'NewsFarmController@deleteNewsFarm')->name('delete_news_farm');
 
     // Tin-Tuc
+    Route::get('/tao-danh-muc-tin-tuc', 'NewsCategoryController@registerNewsCategory')->name('register_category_news');
+    Route::post('/save-danh-muc-tin-tuc', 'NewsCategoryController@saveNewsCategory')->name('save_category_news');
+    Route::get('/xoa-danh-muc-tin-tuc/{id}', 'NewsCategoryController@deleteNewsCategory')->name('delete_category_news');
+    Route::get('/sua-danh-muc-tin-tuc/{id}', 'NewsCategoryController@showEditNewsCategory')->name('show_edit_category_news');
+    Route::post('/sua-danh-muc-tin-tuc', 'NewsCategoryController@editNewsCategory')->name('edit_category_news');
+
     Route::get('/tao-tin-tuc', 'NewsController@formCreateNews')->name('form_create_news');
     Route::post('/tao-tin-tuc', 'NewsController@createNews')->name('create_news');
     Route::get('/danh-sach-tin-tuc', 'NewsController@listNews')->name('list_news');

@@ -16,6 +16,19 @@
                 @endif
             </div>
 
+            <div class="col-md-8">
+                <label>Danh Mục Tin Tức:  <span style="color: red">(*)</span></label>
+                <select class="form-control" id="sel1" name="select_cate_news">
+                    <option value=""></option>
+                    @foreach($categoryNews as $value)
+                        <option value="{{$value['id']}}">{{$value['name']}}</option>
+                    @endforeach
+                </select>
+                @if ($errors->has('select_cate_news'))
+                    <p class="help-block text-left" style="color: red">{{ $errors->first('select_cate_news') }}</p>
+                @endif
+            </div>
+
             <div class="col-md-12" style="margin-top: 15px">
                 <label>Mô tả về tin tức <span style="color: red">(*)</span></label>
                 <textarea id="editor1" name="content_news" rows="7" class="form-control ckeditor">{{old('content_news')}}</textarea>

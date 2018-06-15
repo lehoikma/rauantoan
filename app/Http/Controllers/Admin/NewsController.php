@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\EditNewsCompanyRequest;
 use App\Http\Requests\EditNewsRequest;
 use App\Http\Requests\SaveNewsRequest;
+use App\Models\CategoriesNews;
 use App\Models\News;
 use App\Models\NewsCompany;
 use App\Http\Controllers\Controller;
@@ -18,7 +19,10 @@ class NewsController extends Controller
      */
     public function formCreateNews()
     {
-        return view('admin.form_create_news');
+        $categoryNews = CategoriesNews::all();
+        return view('admin.form_create_news', [
+            'categoryNews' => $categoryNews
+        ]);
     }
 
     public function createNews(SaveNewsRequest $request)
