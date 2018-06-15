@@ -45,13 +45,20 @@
 
                                     <li>
                                         <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
+                                        <?php
+                                        $categoryNews = \App\Models\CategoriesNews::all();
+                                        ?>
                                         <ul class="sub-menu" style="padding: 0px">
-                                            <li>
-                                                <a href="{{route('list_news_farms')}}" style="border: none">Tin Nông Nghiệp</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{route('list_news_company')}}" style="border: none">Tin Doanh Nghiệp</a>
-                                            </li>
+                                            @foreach($categoryNews as $value)
+                                                <li>
+                                                    <a href="{{route('list_news_category', [
+                                                    'category' => str_slug($value['name']),
+                                                    'id' => $value['id']
+                                                    ])}}" style="border: none">
+                                                        {{$value['name']}}
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </li>
 

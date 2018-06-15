@@ -95,11 +95,13 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'IndexController@index')->name('home');
     Route::get('/tin-tuc', 'NewsController@index')->name('news_list');
-    Route::get('/tin-tuc/{title}/{id}', 'NewsController@detail')->name('news_detail');
+    Route::get('/tin-tuc2/{title}/{id}', 'NewsController@detail')->name('news_detail');
+
+    Route::get('/tin-tuc/{category}/{id}', 'NewsController@listNewsCategory')->name('list_news_category');
 
     Route::get('/tu-van', 'SupportController@index')->name('form_support');
     Route::post('/tu-van', 'SupportController@saveQuestion')->name('save_question');
-
+//
     Route::get('tin-tuc/nha-nong', 'NewsFarmController@listNewsFarm')->name('list_news_farms');
     Route::get('tin-tuc/nha-nong/{title}/{id}', 'NewsFarmController@detail')->name('detail_news_farm');
 

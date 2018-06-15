@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoriesNews;
 use App\Models\News;
 use App\Models\NewsCompany;
 use App\Models\NewsFarm;
@@ -32,5 +33,13 @@ class NewsController extends Controller
         ]);
     }
 
-
+    public function listNewsCategory($category,$id)
+    {
+        $category = CategoriesNews::find($id);
+        $listNews = News::where('category_news_id', $id)->paginate(15);
+        return view('user.news_list_category',[
+            'category' => $category,
+            'listNews' => $listNews
+        ]);
+    }
 }
