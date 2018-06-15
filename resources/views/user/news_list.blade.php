@@ -16,45 +16,17 @@
     </header>
 
     <div class="col-xs-12" style="padding-bottom: 15px;padding-right: 0px; padding-left: 0px;">
-        <div class="mobile-category-product" style="margin-bottom: 10px;background: #c7f3b0;padding: 10px;padding-left: 3px;border-radius: 8px;">
-            <span class="glyphicon glyphicon-grain"></span>
+        @foreach($listNews as $value)
+            <div class="mobile-category-product" style="margin-bottom: 10px;background: #f6f6f6;padding: 10px;padding-left: 3px;border-radius: 8px;">
+                <span class="glyphicon glyphicon-grain"></span>
 
-            <a href="http://alo-nongnghiep.com.vn/list-news-product/3">
-                <strong style="font-size: 18px;     text-transform: uppercase;">
-                    Chuyên Dùng  Rau Củ Quả
-                </strong>
-            </a>
-        </div>
-
-        <div class="mobile-category-product" style="margin-bottom: 10px;background: #fbe3e3;padding: 10px;padding-left: 3px;border-radius: 8px;">
-            <span class="glyphicon glyphicon-grain"></span>
-
-            <a href="http://alo-nongnghiep.com.vn/list-news-product/4">
-                <strong style="font-size: 18px;     text-transform: uppercase;">
-                    Chuyên Dùng Cho Lúa Ngô
-                </strong>
-            </a>
-        </div>
-
-        <div class="mobile-category-product" style="margin-bottom: 10px;background: #dcdcff;padding: 10px;padding-left: 3px;border-radius: 8px;">
-            <span class="glyphicon glyphicon-grain"></span>
-
-            <a href="http://alo-nongnghiep.com.vn/list-news-product/2">
-                <strong style="font-size: 18px;     text-transform: uppercase;">
-                    Chuyên Dùng Cho Cây Chè
-                </strong>
-            </a>
-        </div>
-
-        <div class="mobile-category-product" style="margin-bottom: 10px;background: #f7c8d4;padding: 10px;padding-left: 3px;border-radius: 8px;">
-            <span class="glyphicon glyphicon-grain"></span>
-
-            <a href="http://alo-nongnghiep.com.vn/list-news-product/5">
-                <strong style="font-size: 18px;     text-transform: uppercase;">
-                    Chuyên Cây Công Nghiệp
-                </strong>
-            </a>
-        </div>
+                <a href="{{route('list_news_category',$value['id'])}}">
+                    <strong style="font-size: 18px;     text-transform: uppercase;">
+                        {{$value['name']}}
+                    </strong>
+                </a>
+            </div>
+        @endforeach
     </div>
 
 @endsection
