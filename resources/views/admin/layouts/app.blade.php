@@ -137,31 +137,6 @@
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-th"></i> <span>Tin Tức Doanh Nghiệp</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('form_create_news_company')}}"><i class="fa fa-circle-o"></i> Tạo Tin</a></li>
-                        <li><a href="{{route('list_news_companys')}}"><i class="fa fa-circle-o"></i> Danh Sách Tin</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Tin Nông Nghiệp</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('form_create_news_farm')}}"><i class="fa fa-circle-o"></i> Tạo Tin</a></li>
-                        <li><a href="{{route('list_news_farm')}}"><i class="fa fa-circle-o"></i> Danh Sách Tin</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
                     <a href="">
                         <i class="fa fa-laptop"></i>
                         <span>Hình Ảnh</span>

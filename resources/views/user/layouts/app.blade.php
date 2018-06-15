@@ -51,10 +51,9 @@
                                         <ul class="sub-menu" style="padding: 0px">
                                             @foreach($categoryNews as $value)
                                                 <li>
-                                                    <a href="{{route('list_news_category', [
-                                                    'category' => str_slug($value['name']),
-                                                    'id' => $value['id']
-                                                    ])}}" style="border: none">
+                                                    <a href="{{route('list_news_category',
+                                                    $value['id']
+                                                    )}}" style="border: none">
                                                         {{$value['name']}}
                                                     </a>
                                                 </li>

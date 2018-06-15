@@ -28,7 +28,7 @@ Trang Chủ
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{{route('list_news_farm')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -58,7 +58,7 @@ Trang Chủ
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="{{route('list_news_companys')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
 @endsection

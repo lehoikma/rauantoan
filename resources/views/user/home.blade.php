@@ -72,13 +72,13 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
-                        <a class="thumb-zoom" href="{{route('detail_news_company',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}">
+                        <a class="thumb-zoom" href="{{route('news_detail',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}">
                             <img style="width: 100%; height: 150px"  src="upload/{{$valueNewCompany['image']}}" alt="" title="{{$valueNewCompany['title']}}">
                             <div class="image-overlay"></div>
                         </a>
                     </div>
                     <h4 style="font-size: 14px; font-weight: 500;" class="small-font;">
-                        <a href="{{route('detail_news_company',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}" style="color: #333">
+                        <a href="{{route('news_detail',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}" style="color: #333">
                             {{$valueNewCompany['title']}}
                         </a>
                     </h4>
@@ -105,13 +105,13 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
-                        <a class="thumb-zoom" href="{{route('detail_news_farm',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" title="{{$valueNewsFarm['title']}}">
+                        <a class="thumb-zoom" href="{{route('news_detail',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" title="{{$valueNewsFarm['title']}}">
                             <img style="width: 100%; height: 150px" src="upload/{{$valueNewsFarm['image']}}" alt="" title="{{$valueNewsFarm['title']}}">
                             <div class="image-overlay"></div>
                         </a>
                     </div>
                     <h4 style="font-size: 14px; font-weight: 500;" class="small-font;">
-                        <a href="{{route('detail_news_farm',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" style="color: #333">
+                        <a href="{{route('news_detail',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" style="color: #333">
                             {{$valueNewsFarm['title']}}
                         </a>
                     </h4>

@@ -32,23 +32,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
     Route::get('/xoa-san-pham/{id}', 'ProductsController@deleteProduct')->name('delete_product');
     Route::get('/sua-san-pham/{id}', 'ProductsController@showEditProduct')->name('show_edit_product');
     Route::post('/sua-san-pham', 'ProductsController@editProduct')->name('edit_product');
-
-    // Tin-Tuc-Doanh-Nghiep
-    Route::get('/tao-tin-tuc-doanh-nghiep', 'NewsCompanyController@formCreateNewsCompany')->name('form_create_news_company');
-    Route::post('/tao-tin-tuc-doanh-nghiep', 'NewsCompanyController@createNewsCompany')->name('create_news_company');
-    Route::get('/danh-sach-tin-tuc-doanh-nghiep', 'NewsCompanyController@listNewsCompany')->name('list_news_companys');
-    Route::get('/sua-tin-tuc-doanh-nghiep/{id}', 'NewsCompanyController@showEditNewsCompany')->name('show_edit_news_company');
-    Route::post('/sua-tin-tuc-doanh-nghiep', 'NewsCompanyController@editNewsCompany')->name('edit_news_company');
-    Route::get('/xoa-tin-tuc-doanh-nghiep/{id}', 'NewsCompanyController@deleteNewsCompany')->name('delete_news_company');
-
-    // Tin-Tuc-Nha-Nong
-    Route::get('/tao-tin-tuc-nha-nong', 'NewsFarmController@formCreateNewsFarm')->name('form_create_news_farm');
-    Route::post('/tao-tin-tuc-nha-nong', 'NewsFarmController@createNewsFarm')->name('create_news_farm');
-    Route::get('/danh-sach-tin-tuc-nha-nong', 'NewsFarmController@listNewsFarm')->name('list_news_farm');
-    Route::get('/sua-tin-tuc-nha-nong/{id}', 'NewsFarmController@showEditNewsFarm')->name('show_edit_news_farm');
-    Route::post('/sua-tin-tuc-nha-nong', 'NewsFarmController@editNewsFarm')->name('edit_news_farm');
-    Route::get('/xoa-tin-tuc-nha-nong/{id}', 'NewsFarmController@deleteNewsFarm')->name('delete_news_farm');
-
     // Tin-Tuc
     Route::get('/tao-danh-muc-tin-tuc', 'NewsCategoryController@registerNewsCategory')->name('register_category_news');
     Route::post('/save-danh-muc-tin-tuc', 'NewsCategoryController@saveNewsCategory')->name('save_category_news');
@@ -95,26 +78,13 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'IndexController@index')->name('home');
     Route::get('/tin-tuc', 'NewsController@index')->name('news_list');
-    Route::get('/tin-tuc2/{title}/{id}', 'NewsController@detail')->name('news_detail');
-
-    Route::get('/tin-tuc/{category}/{id}', 'NewsController@listNewsCategory')->name('list_news_category');
-
+    Route::get('/tin-tuc/post/{title}/{id}', 'NewsController@detail')->name('news_detail');
+    Route::get('/tin-tuc/category/{id}', 'NewsController@listNewsCategory')->name('list_news_category');
     Route::get('/tu-van', 'SupportController@index')->name('form_support');
     Route::post('/tu-van', 'SupportController@saveQuestion')->name('save_question');
-//
-    Route::get('tin-tuc/nha-nong', 'NewsFarmController@listNewsFarm')->name('list_news_farms');
-    Route::get('tin-tuc/nha-nong/{title}/{id}', 'NewsFarmController@detail')->name('detail_news_farm');
-
-    Route::get('tin-tuc/doanh-nghiep', 'NewsCompanyController@listNewsCompany')->name('list_news_company');
-    Route::get('tin-tuc/doanh-nghiep/{title}/{id}', 'NewsCompanyController@detail')->name('detail_news_company');
-
     Route::get('/san-pham', 'NewsProductController@listNewsProduct')->name('list_news_products');
-
     Route::get('/san-pham/category/{id}', 'NewsProductController@listNewsProductCategory')->name('list_news_products_category');
-
     Route::get('/san-pham/{title}/{id}', 'NewsProductController@detail')->name('detail_news_products');
-
     Route::get('/hinh-anh', 'ImageController@listImage')->name('list_image');
-
     Route::get('/videos', 'VideosController@listVideos')->name('videos');
 });

@@ -17,10 +17,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $newsCompany = NewsCompany::limit(9)->orderBy('created_at', 'desc')->get();
-        $newsFarm = NewsFarm::limit(9)->orderBy('created_at', 'desc')->get();
-        $newsFirst = News::orderBy('created_at', 'desc')->first();
-        $newsList = News::limit(5)->orderBy('created_at', 'desc')->get();
+        $newsCompany = News::where('category_news_id', 3)->limit(9)->orderBy('created_at', 'desc')->get();
+        $newsFarm = News::where('category_news_id', 2)->limit(9)->orderBy('created_at', 'desc')->get();
+        $newsFirst = News::where('category_news_id', 1)->orderBy('created_at', 'desc')->first();
+        $newsList = News::where('category_news_id', 1)->limit(5)->orderBy('created_at', 'desc')->get();
         return view('user.home', [
             'newsCompany' => $newsCompany,
             'newsFarm' => $newsFarm,

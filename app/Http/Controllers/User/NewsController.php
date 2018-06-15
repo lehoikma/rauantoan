@@ -33,7 +33,7 @@ class NewsController extends Controller
         ]);
     }
 
-    public function listNewsCategory($category,$id)
+    public function listNewsCategory($id)
     {
         $category = CategoriesNews::find($id);
         $listNews = News::where('category_news_id', $id)->paginate(15);
