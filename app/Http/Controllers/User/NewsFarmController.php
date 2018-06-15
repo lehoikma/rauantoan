@@ -25,7 +25,7 @@ class NewsFarmController extends Controller
     public function detail($title, $id)
     {
         $newsFarm = NewsFarm::find($id);
-        $newsFarmFollow = NewsFarm::all()->all(3);
+        $newsFarmFollow = NewsFarm::limit(3)->get();
         return view('user.news_farm_detail', [
             'newsFarm' => $newsFarm,
             'newsFarmFollow' => $newsFarmFollow

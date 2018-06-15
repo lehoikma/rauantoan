@@ -90,14 +90,15 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'IndexController@index')->name('home');
     Route::get('/tin-tuc', 'NewsController@index')->name('news_list');
     Route::get('/tin-tuc/{title}/{id}', 'NewsController@detail')->name('news_detail');
+
     Route::get('/tu-van', 'SupportController@index')->name('form_support');
     Route::post('/tu-van', 'SupportController@saveQuestion')->name('save_question');
 
-    Route::get('/nha-nong', 'NewsFarmController@listNewsFarm')->name('list_news_farms');
-    Route::get('/nha-nong/{title}/{id}', 'NewsFarmController@detail')->name('detail_news_farm');
+    Route::get('tin-tuc/nha-nong', 'NewsFarmController@listNewsFarm')->name('list_news_farms');
+    Route::get('tin-tuc/nha-nong/{title}/{id}', 'NewsFarmController@detail')->name('detail_news_farm');
 
-    Route::get('/doanh-nghiep', 'NewsCompanyController@listNewsCompany')->name('list_news_company');
-    Route::get('/doanh-nghiep/{title}/{id}', 'NewsCompanyController@detail')->name('detail_news_company');
+    Route::get('tin-tuc/doanh-nghiep', 'NewsCompanyController@listNewsCompany')->name('list_news_company');
+    Route::get('tin-tuc/doanh-nghiep/{title}/{id}', 'NewsCompanyController@detail')->name('detail_news_company');
 
     Route::get('/san-pham', 'NewsProductController@listNewsProduct')->name('list_news_products');
 
@@ -108,32 +109,4 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/hinh-anh', 'ImageController@listImage')->name('list_image');
 
     Route::get('/videos', 'VideosController@listVideos')->name('videos');
-    // MOBILE
-//    Route::get('/list-category-product', 'NewsProductController@mobileListCategory')->name('list-category-product');
-//
-//    Route::get('/list-news-product/{id}', 'NewsProductController@mobileListNews')->name('list_news_product_mobile');
-//
-//    Route::get('/detail-news-product/{id}', 'NewsProductController@mobileDetailNews')->name('detail_news_product_mobile');
-//
-//
-//
-//    Route::get('/list-video', 'VideosController@mobileListVideos')->name('list_video_mobile');
-//
-//    Route::get('/detail-video/{id}', 'VideosController@mobileDetailVideo')->name('detail_video_mobile');
-//
-//    Route::get('/list-news', 'NewsController@mobileListNews')->name('list_news_mobile');
-//
-//    Route::get('/detail-news/{id}', 'NewsController@mobileDetailNews')->name('detail_news_mobile');
-//
-//    Route::get('/list-news-company', 'NewsCompanyController@mobileListNewsCompany')->name('list_news_company_mobile');
-//
-//    Route::get('/detail-news-company/{id}', 'NewsCompanyController@mobileDetailNewsCompany')->name('detail_news_company_mobile');
-//
-//    Route::get('/list-news-farm', 'NewsFarmController@mobileListNewsFarm')->name('list_news_farm_mobile');
-//
-//    Route::get('/detail-news-farm/{id}', 'NewsFarmController@mobileDetailNewsFarm')->name('detail_news_farm_mobile');
-//
-//    Route::get('/list-image', 'ImageController@mobileListImages')->name('list_image_mobile');
-//
-//    Route::get('/question', 'SupportController@mobileQuestion')->name('question');
 });

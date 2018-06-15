@@ -15,40 +15,46 @@
         <h1 class="page-title" style="font-weight: 400; color: #38A63A">Tin tức</h1>
     </header>
 
-    @foreach($listNews as $value)
-        <div class="post-news" style="border-bottom: 1px solid #e1e1e1;padding-bottom: 20px;margin-bottom: 30px;">
+    <div class="col-xs-12" style="padding-bottom: 15px;padding-right: 0px; padding-left: 0px;">
+        <div class="mobile-category-product" style="margin-bottom: 10px;background: #c7f3b0;padding: 10px;padding-left: 3px;border-radius: 8px;">
+            <span class="glyphicon glyphicon-grain"></span>
 
-        <div class="entry-thumb">
-            <a class="thumb-zoom" href="{{route('news_detail',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
-                <img style="width: 700px; height: 400px" src="upload/{{$value['image']}}" alt="">
+            <a href="http://alo-nongnghiep.com.vn/list-news-product/3">
+                <strong style="font-size: 18px;     text-transform: uppercase;">
+                    Chuyên Dùng  Rau Củ Quả
+                </strong>
             </a>
         </div>
 
-        <div class="entry-content">
-            <h3 class="entry-title">
-                <a href="{{route('news_detail',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
-                    {{$value['title']}}
-                </a>
-            </h3>
-            <div class="entry-meta">
-                <span class="posted-on">
-                    <a rel="bookmark">
-                        <span class="glyphicon glyphicon-calendar"></span><span>
-                            {{ date_format(date_create($value['created_at']), 'd/m/Y')}}
-                        </span>
-                    </a>
-                </span>
-            </div><!-- .entry-meta -->
-            <p style="margin-top: 15px">
-                {{ strip_tags(substr($value['content'], 0,500)) }} ...
-            </p>
-            <a class="vmag-archive-more" href="{{route('news_detail',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
-                Xem thêm
+        <div class="mobile-category-product" style="margin-bottom: 10px;background: #fbe3e3;padding: 10px;padding-left: 3px;border-radius: 8px;">
+            <span class="glyphicon glyphicon-grain"></span>
+
+            <a href="http://alo-nongnghiep.com.vn/list-news-product/4">
+                <strong style="font-size: 18px;     text-transform: uppercase;">
+                    Chuyên Dùng Cho Lúa Ngô
+                </strong>
             </a>
-        </div><!-- .entry-content -->
+        </div>
+
+        <div class="mobile-category-product" style="margin-bottom: 10px;background: #dcdcff;padding: 10px;padding-left: 3px;border-radius: 8px;">
+            <span class="glyphicon glyphicon-grain"></span>
+
+            <a href="http://alo-nongnghiep.com.vn/list-news-product/2">
+                <strong style="font-size: 18px;     text-transform: uppercase;">
+                    Chuyên Dùng Cho Cây Chè
+                </strong>
+            </a>
+        </div>
+
+        <div class="mobile-category-product" style="margin-bottom: 10px;background: #f7c8d4;padding: 10px;padding-left: 3px;border-radius: 8px;">
+            <span class="glyphicon glyphicon-grain"></span>
+
+            <a href="http://alo-nongnghiep.com.vn/list-news-product/5">
+                <strong style="font-size: 18px;     text-transform: uppercase;">
+                    Chuyên Cây Công Nghiệp
+                </strong>
+            </a>
+        </div>
     </div>
-    @endforeach
-    <div class="pagination-custom">
-        <?php echo $listNews->render(); ?>
-    </div>
+
 @endsection

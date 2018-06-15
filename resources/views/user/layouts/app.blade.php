@@ -39,23 +39,23 @@
                             <div class="menustyle _lg_fr">
                                 <ul id="primary-menu1" class="nav navbar-nav  sm menu-custom" data-smartmenus-id="1526812798300609"
                                     style="font-size: 14px !important;;font-weight: 700;list-style: none; position: relative;">
-                                    <li class="menu-active">
+                                    <li>
                                         <a class="menu-active" href="{{route('home')}}">Trang chủ</a>
                                     </li>
 
-                                    <li class="menu-active">
+                                    <li>
                                         <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
                                         <ul class="sub-menu" style="padding: 0px">
                                             <li>
-                                                <a class="" href="{{route('list_news_farms')}}" style="border: none">Tin Nông Nghiệp</a>
+                                                <a href="{{route('list_news_farms')}}" style="border: none">Tin Nông Nghiệp</a>
                                             </li>
                                             <li>
-                                                <a class="" href="{{route('list_news_company')}}" style="border: none">Tin Doanh Nghiệp</a>
+                                                <a href="{{route('list_news_company')}}" style="border: none">Tin Doanh Nghiệp</a>
                                             </li>
                                         </ul>
                                     </li>
 
-                                    <li class="menu-active">
+                                    <li>
                                         <a class="menu-active" href="{{route('list_news_products')}}">Sản Phẩm</a>
                                         <?php
                                         $categoryProduct = \App\Models\CategoriesProduct::all();
@@ -71,13 +71,13 @@
                                         </ul>
                                     </li>
 
-                                    <li class="menu-active">
-                                        <a class="" href="{{route('videos')}}">Video</a>
+                                    <li>
+                                        <a class="menu-active" href="{{route('videos')}}">Video</a>
                                     </li>
-                                    <li class="menu-active">
+                                    <li>
                                         <a class="menu-active" href="{{route('list_image')}}">Hình Ảnh</a>
                                     </li>
-                                    <li class="menu-active">
+                                    <li>
                                         <a class="menu-active" href="{{route('form_support')}}">Tư vấn </a>
                                     </li>
                                 </ul>
@@ -163,15 +163,28 @@
     </div>
 </div>
 <script>
+  // $(function() {
+  //     var href = window.location.href;
+  //     $('li.menu-active a').each(function(e,i) {
+  //         if (href.indexOf($(this).attr('href')) >= 0) {
+  //             // $('li.menu-active').removeClass('active');
+  //             // $(this).parent().addClass('active');
+  //             $('li.menu-active').removeClass('active');
+  //             $(this).parent().addClass('active');
+  //         }
+  //     });
+  // });
+
   $(function() {
       var href = window.location.href;
-      $('li.menu-active a').each(function(e,i) {
+      $('a.menu-active').each(function(e,i) {
           if (href.indexOf($(this).attr('href')) >= 0) {
-              $('li.menu-active').removeClass('active');
+              $('li.active').removeClass('active');
               $(this).parent().addClass('active');
           }
       });
   });
+
 </script>
 </body>
 </html>
