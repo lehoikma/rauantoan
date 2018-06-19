@@ -12,7 +12,7 @@
     <header class="page-header1" style="padding-bottom: 9px;
     margin: 20px 0 20px;
     border-bottom: 1px solid #eee;">
-        <h1 class="page-title" style="font-weight: 400; color: #38A63A">{{$category['name']}}</h1>
+        <h1 class="page-title" style="font-weight: 400; color: #c0d071">{{$category['name']}}</h1>
     </header>
 
     @foreach($listNews as $value)

@@ -12,7 +12,7 @@
         <span class="current">{{$news['title']}}</span>
     </div>
     <div class="page-header1" style="padding-bottom: 9px;">
-        <h2 class="page-title" style="font-weight: 400; color: #38A63A">
+        <h2 class="page-title" style="font-weight: 400; color: #c0d071">
             {{$news['title']}}
         </h2>
     </div>

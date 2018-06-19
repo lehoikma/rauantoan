@@ -10,7 +10,7 @@
         <span class="current">Tư Vấn</span>
     </div>
     <div class="page-header1" style="padding-bottom: 9px;">
-        <h2 class="page-title" style="font-weight: 400; padding-bottom: 10px; border-bottom: 1px solid #d9d8d8; color: #38A63A">
+        <h2 class="page-title" style="font-weight: 400; padding-bottom: 10px; border-bottom: 1px solid #d9d8d8; color: #c0d071">
             Tư Vấn
         </h2>
     </div>

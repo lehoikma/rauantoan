@@ -17,7 +17,7 @@
 <body style="margin: 0px">
 <div class="page">
     <div class="header">
-        <div class="logo" style="background: #8fcc6d">
+        <div class="logo" style="background: #c0d071">
             <div class="custom-container custom-container1">
                 <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img src="/image/logo1.png" class="custom-logo" alt="logo-f" itemprop="logo" style="    margin: 10px 0px;"></a>
             </div>
@@ -126,7 +126,7 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="tin-tuc-title" style=" padding: 8px 16px; padding-left: 0px">
-                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Sản Phẩm</button>
+                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Sản Phẩm</button>
             </div>
 
             <div class="single-post clearfix">
@@ -154,7 +154,7 @@
                 </div>
                 @endforeach
                 <div class="tin-tuc-title" style=" padding: 8px 16px; padding-left: 0px">
-                    <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Video</button>
+                    <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Video</button>
                 </div>
                 <?php $videos = \App\Models\Videos::limit(2)->orderBy('created_at', 'desc')->get();?>
                     @foreach($videos as $video)
@@ -165,7 +165,7 @@
                     @endforeach
 
                 <div class="tin-tuc-title" style=" padding: 8px 16px; padding-left: 0px">
-                    <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Phân Bón Doanh Nông</button>
+                    <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Phân Bón Doanh Nông</button>
                 </div>
                 <a href="http://phanbondoanhnong.com.vn/">
                         <img src="/image/banner1.jpg" style="padding-bottom: 20px;width: 100%;">
@@ -178,7 +178,7 @@
     </div>
     <div class="clearfix"></div>
 
-    <div class="footer" style="background: #8fcc6d; width: 100%; float: left; margin-top: 30px;">
+    <div class="footer" style="background: #c0d071; width: 100%; float: left; margin-top: 30px;">
         <div class="custom-container" style="padding-top: 5px; padding-bottom: 0px;">
             <div class="blog1" style="width: 85%; float: left; padding: 20px;">
                 <img src="/image/logo1.png">

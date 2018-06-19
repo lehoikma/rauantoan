@@ -12,7 +12,7 @@
     <header class="page-header1" style="padding-bottom: 9px;
     margin: 20px 0 20px;
     border-bottom: 1px solid #eee;">
-        <h1 class="page-title" style="font-weight: 400; color: #38A63A">Tin tức</h1>
+        <h1 class="page-title" style="font-weight: 400; color: #c0d071">Tin tức</h1>
     </header>
 
     <div class="col-xs-12" style="padding-bottom: 15px;padding-right: 0px; padding-left: 0px;">

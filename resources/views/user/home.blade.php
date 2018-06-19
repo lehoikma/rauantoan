@@ -6,7 +6,7 @@
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 16px; padding-left: 0px">
-                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tập Đoàn</button>
+                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tập Đoàn</button>
             </div>
         </div>
         <div style="margin-top: 20px">
@@ -65,7 +65,7 @@
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%; margin-top: 30px">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 0px;">
-                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Tin Doanh Nghiệp</button>
+                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Tin Doanh Nghiệp</button>
             </div>
         </div>
         @foreach($newsCompany as $key=>$valueNewCompany)
@@ -98,7 +98,7 @@
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%; margin-top: 30px">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 0px;">
-                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-color: snow; border-radius: 0px;">Tin Nông Nghiệp</button>
+                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-color: snow; border-radius: 0px;">Tin Nông Nghiệp</button>
             </div>
         </div>
         @foreach($newsFarm as $key => $valueNewsFarm)

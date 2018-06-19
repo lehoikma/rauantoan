@@ -60,6 +60,9 @@
         width: 100% !important;
         height: 300px !important;
     }
+    .blog1 img {
+        display: none;
+    }
 }
 .custom-container {
     max-width: 1070px;
@@ -93,7 +96,7 @@
 
 .post-news .entry-content .entry-title a:hover {
     text-decoration: none;
-    color: #8fcc6d;
+    color: #c0d071;
 }
 
 .post-news .entry-content .entry-title a {
@@ -116,14 +119,14 @@
 .vmag-archive-more:hover{
     text-decoration: none;
     color: #ffffff;
-    background-color: #8fcc6d;
+    background-color: #c0d071;
 }
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #8fcc6d;
-    border-color: #8fcc6d;
+    background-color: #c0d071;
+    border-color: #c0d071;
 }
 
 .sub-menu {
@@ -152,7 +155,7 @@
 }
 
 .sub-menu li:hover a{
-    color: #8fcc6d !important;
+    color: #c0d071 !important;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -161,5 +164,5 @@
 }
 
 .active {
-    background-color: #8fcc6d !important;
+    background-color: #c0d071 !important;
 }

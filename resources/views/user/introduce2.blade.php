@@ -12,7 +12,7 @@
     </span> >
         <span class="current">Cơ Cấu, Tổ Chức</span>
     </div>
-    <h2 class="page-title" style="font-weight: 400; color: #38A63A;border-bottom: 1px solid #eee;padding-bottom: 10px;">
+    <h2 class="page-title" style="font-weight: 400; color: #c0d071;border-bottom: 1px solid #eee;padding-bottom: 10px;">
         Cơ Cấu, Tổ Chức
     </h2>
     <div class="introduces">
