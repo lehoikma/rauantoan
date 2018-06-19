@@ -22,7 +22,6 @@
                 <select class="form-control" id="sel1" name="select_cate_news">
                     <option value=""></option>
                     @foreach($categoryNews as $value)
-                        <?php var_dump($news['category_news_id']); ?>
                         <option value="{{$value['id']}}" {{ $value['id']==$news['category_news_id'] ? 'selected' : ''}}>{{$value['name']}}</option>
                     @endforeach
                 </select>
