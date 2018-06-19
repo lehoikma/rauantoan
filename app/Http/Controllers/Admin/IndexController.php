@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\ItemProduct;
 use App\Models\News;
-use App\Models\NewsCompany;
-use App\Models\NewsFarm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -48,14 +46,10 @@ class IndexController extends Controller
     public function top()
     {
         $product = ItemProduct::all();
-        $newsFarm = NewsFarm::all();
         $news = News::all();
-        $newsCompany = NewsCompany::all();
         return view('admin.top_index', [
             'product' => $product,
-            'newsFarm' => $newsFarm,
-            'news' => $news,
-            'newsCompany' => $newsCompany,
+            'news' => $news
         ]);
     }
 

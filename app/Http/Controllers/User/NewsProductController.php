@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\CategoriesProduct;
 use App\Models\ItemProduct;
 use App\Models\News;
-use App\Models\NewsCompany;
-use App\Models\NewsFarm;
 
 class NewsProductController extends Controller
 {

@@ -21,7 +21,7 @@ Trang Chủ
             <!-- small box -->
             <div class="small-box bg-green">
                 <div class="inner">
-                    <h3>{{count($newsFarm)}}</h3>
+                    <h3>0</h3>
 
                     <p>Tin Nông Nghiệp</p>
                 </div>
@@ -51,7 +51,7 @@ Trang Chủ
             <!-- small box -->
             <div class="small-box bg-red">
                 <div class="inner">
-                    <h3>{{count($newsCompany)}}</h3>
+                    <h3>0</h3>
 
                     <p>Tin Doanh Nghiệp</p>
                 </div>

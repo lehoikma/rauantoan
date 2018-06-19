@@ -72,6 +72,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth
     Route::get('/danh-sach-videos', 'VideosController@listVideos')->name('list_videos');
     Route::get('/xoa-videos/{id}', 'VideosController@deleteVideos')->name('delete_videos');
 
+    Route::get('/tao-lich-su-hinh-thanh', 'IntroducesController@formIntroduce1')->name('form_history1');
+    Route::get('/tao-co-cau-to-chuc', 'IntroducesController@formIntroduce2')->name('form_history2');
+    Route::get('/tao-don-vi-thanh-vien', 'IntroducesController@formIntroduce3')->name('form_history3');
+    Route::get('/tao-dang-doan-the', 'IntroducesController@formIntroduce4')->name('form_history4');
+    Route::post('/save-gioi-thieu', 'IntroducesController@saveIntroduces')->name('save_introduces');
+
     Route::get('/logout', 'IndexController@logout')->name('admin_logout');
 });
 
@@ -87,4 +93,9 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/san-pham/{title}/{id}', 'NewsProductController@detail')->name('detail_news_products');
     Route::get('/hinh-anh', 'ImageController@listImage')->name('list_image');
     Route::get('/videos', 'VideosController@listVideos')->name('videos');
+
+    Route::get('gioi-thieu', 'IntroducesController@index')->name('introduce');
+    Route::get('gioi-thieu/lich-su-hinh-thanh', 'IntroducesController@introduce1')->name('introduce1');
+    Route::get('gioi-thieu/co-cau-to-chuc', 'IntroducesController@introduce2')->name('introduce2');
+    Route::get('gioi-thieu/chuc-nang-nhiem-vu', 'IntroducesController@introduce3')->name('introduce3');
 });

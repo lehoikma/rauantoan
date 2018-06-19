@@ -6,11 +6,11 @@
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 16px; padding-left: 0px">
-                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tức</button>
+                <button type="button" class="btn btn-success" style=" background: #8fcc6d; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tập Đoàn</button>
             </div>
         </div>
         <div style="margin-top: 20px">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home1" style="padding-left: 0px">
                 <a href="{{route('news_detail',['title' => str_slug($newsFirst['title'], '-'),'id' => $newsFirst['id']])}}">
                     <img style="width: 100%" src="upload/{{$newsFirst['image']}}" alt="" title="{{$newsFirst['title']}}">
                 </a>
@@ -69,7 +69,7 @@
             </div>
         </div>
         @foreach($newsCompany as $key=>$valueNewCompany)
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home1" style="margin-top: 20px; padding-left: 0px">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
                         <a class="thumb-zoom" href="{{route('news_detail',['title' => str_slug($valueNewCompany['title'], '-'),'id' => $valueNewCompany['id']])}}">
@@ -102,7 +102,7 @@
             </div>
         </div>
         @foreach($newsFarm as $key => $valueNewsFarm)
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin-top: 20px;">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home1" style="margin-top: 20px; padding-left: 0px">
                 <div class="single-post clearfix">
                     <div class="post-thumb">
                         <a class="thumb-zoom" href="{{route('news_detail',['title' => str_slug($valueNewsFarm['title'], '-'),'id' => $valueNewsFarm['id']])}}" title="{{$valueNewsFarm['title']}}">

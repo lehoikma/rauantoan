@@ -5,9 +5,6 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\CategoriesNews;
 use App\Models\News;
-use App\Models\NewsCompany;
-use App\Models\NewsFarm;
-
 class NewsController extends Controller
 {
     /**

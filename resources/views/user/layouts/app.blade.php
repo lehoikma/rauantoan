@@ -44,6 +44,26 @@
                                     </li>
 
                                     <li>
+                                        <a class="menu-active" href="{{route('introduce')}}">Giới Thiệu</a>
+                                        <ul class="sub-menu" style="padding: 0px">
+                                            <li>
+                                                <a href="{{route('introduce1')}}" style="border: none">
+                                                    Lịch Sử Hình Thành
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{route('introduce2')}}" style="border: none">
+                                                    Cơ Cấu Tổ Chức
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{route('introduce3')}}" style="border: none">
+                                                    Chức Năng, Nhiệm Vụ
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
                                         <?php
                                         $categoryNews = \App\Models\CategoriesNews::all();

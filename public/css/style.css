@@ -50,6 +50,9 @@
     .image img {
         width: 100% !important;
     }
+    .home1 {
+        padding-right: 0px;
+    }
 }
 .custom-container {
     max-width: 1070px;
