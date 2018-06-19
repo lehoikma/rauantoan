@@ -98,4 +98,6 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('gioi-thieu/lich-su-hinh-thanh', 'IntroducesController@introduce1')->name('introduce1');
     Route::get('gioi-thieu/co-cau-to-chuc', 'IntroducesController@introduce2')->name('introduce2');
     Route::get('gioi-thieu/chuc-nang-nhiem-vu', 'IntroducesController@introduce3')->name('introduce3');
+
+    Route::get('lien-he', 'IntroducesController@contact')->name('contact');
 });

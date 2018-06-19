@@ -42,4 +42,9 @@ class IntroducesController extends Controller
             'introduce' => $introduce
         ]);
     }
+
+    public function contact()
+    {
+        return view('user.contact');
+    }
 }

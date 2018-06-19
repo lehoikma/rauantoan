@@ -106,6 +106,9 @@
                                     <li>
                                         <a class="menu-active" href="{{route('form_support')}}">Tư vấn </a>
                                     </li>
+                                    <li>
+                                        <a class="menu-active" href="{{route('contact')}}">Liên Hệ</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

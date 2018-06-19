@@ -19,6 +19,9 @@
     #myNavbar {
         padding-left: 0px;
     }
+    .map iframe {
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -52,6 +55,10 @@
     }
     .home1 {
         padding-right: 0px;
+    }
+    .map iframe {
+        width: 100% !important;
+        height: 300px !important;
     }
 }
 .custom-container {
