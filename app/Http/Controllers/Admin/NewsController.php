@@ -33,6 +33,7 @@ class NewsController extends Controller
 
         $newsCompany = News::create([
             'content' => $request['content_news'],
+            'category_news_id' => $request['select_cate_news'],
             'image' => $filename,
             'author' => $request['author'],
             'title' => $request['title_news']
@@ -57,11 +58,13 @@ class NewsController extends Controller
     public function showEditNews($id)
     {
         $news = News::find($id);
+        $categoryNews = CategoriesNews::all();
 
         if (isset($news) && !empty($news)) {
 
             return view('admin.edit_news', [
                 'news' => $news,
+                'categoryNews' => $categoryNews
             ]);
         }
         return redirect()->route('list_news', [
@@ -83,6 +86,7 @@ class NewsController extends Controller
         $newsEdit = News::where('id', $request['news_id'])
             ->update([
                 'content' => $request['content_news'],
+                'category_news_id' => $request['select_cate_news'],
                 'image' => $filename,
                 'author' => $request['author'],
                 'title' => $request['title_news']

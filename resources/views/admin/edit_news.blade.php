@@ -10,11 +10,22 @@
             <div class="col-md-8">
                 <label>Tên Tin Tức <span style="color: red">(*)</span></label>
                 <div class="form-group">
-                    <input type="text" name="title_news" class="form-control" placeholder="Nhập tên sản phẩm ..." value="{{$news['title']}}">
+                    <input type="text" name="title_news" class="form-control" placeholder="Nhập tên tin tức ..." value="{{$news['title']}}">
                 </div>
                 @if ($errors->has('title_news'))
                     <p class="help-block text-left" style="color: red">{{ $errors->first('title_news') }}</p>
                 @endif
+            </div>
+
+            <div class="col-md-8">
+                <label>Danh Mục Tin Tức:</label>
+                <select class="form-control" id="sel1" name="select_cate_news">
+                    <option value=""></option>
+                    @foreach($categoryNews as $value)
+                        <?php var_dump($news['category_news_id']); ?>
+                        <option value="{{$value['id']}}" {{ $value['id']==$news['category_news_id'] ? 'selected' : ''}}>{{$value['name']}}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="col-md-12" style="margin-top: 15px">

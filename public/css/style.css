@@ -22,6 +22,9 @@
     .map iframe {
         width: 100% !important;
     }
+    .footer-prf {
+        padding-top: 35px !important;
+    }
 }
 
 @media screen and (max-width: 600px) {

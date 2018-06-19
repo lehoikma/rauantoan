@@ -182,10 +182,10 @@
         <div class="custom-container" style="padding-top: 5px; padding-bottom: 0px;">
             <div class="blog1" style="width: 85%; float: left; padding: 20px;">
                 <img src="/image/logo1.png">
-                <p style="color: #fff; padding-top: 0px; padding-right: 20px; float: right;">Đơn vị chủ quản: Tập Đoàn Thành Đô<br>
-                    Tòa nhà Plaschem, 562 Nguyễn Văn Cừ, Long Biên, Hà Nội<br>
-                    Tel: 0243.652.7766 hoặc DĐ: 0913.311.678<br>
-                    Chịu trách nhiệm nội dung: Vũ Thanh Khiết<br>
+                <p class="footer-prf" style="color: #fff; padding-top: 0px; padding-right: 20px; float: right;">CÔNG TY TNHH NÔNG NGHIỆP CÔNG NGHỆ CAO DABACO<br>
+                    Thôn Hộ Vệ - Xã Lạc Vệ - huyện Tiên Du - Tỉnh Bắc Ninh<br>
+                    Tel: 0222.3724.138<br>
+                    Chịu trách nhiệm nội dung: Nguyễn Gia Tài<br>
                 </p>
             </div>
         </div>
