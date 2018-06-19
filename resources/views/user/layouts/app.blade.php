@@ -19,7 +19,7 @@
     <div class="header">
         <div class="logo" style="background: #8fcc6d">
             <div class="custom-container custom-container1">
-                <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="275" height="150" src="/image/logo1.png" class="custom-logo" alt="logo-f" itemprop="logo" style="    margin: 10px 0px;"></a>
+                <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img src="/image/logo1.png" class="custom-logo" alt="logo-f" itemprop="logo" style="    margin: 10px 0px;"></a>
             </div>
         </div>
 
@@ -158,7 +158,7 @@
     <div class="footer" style="background: #8fcc6d; width: 100%; float: left; margin-top: 30px;">
         <div class="custom-container" style="padding-top: 5px; padding-bottom: 0px;">
             <div class="blog1" style="width: 85%; float: left; padding: 20px;">
-                <img width="275" height="150" src="/image/logo1.png">
+                <img src="/image/logo1.png">
                 <p style="color: #fff; padding-top: 0px; padding-right: 20px; float: right;">Đơn vị chủ quản: Tập Đoàn Thành Đô<br>
                     Tòa nhà Plaschem, 562 Nguyễn Văn Cừ, Long Biên, Hà Nội<br>
                     Tel: 0243.652.7766 hoặc DĐ: 0913.311.678<br>
