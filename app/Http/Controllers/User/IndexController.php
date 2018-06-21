@@ -16,8 +16,8 @@ class IndexController extends Controller
     {
         $newsCompany = News::where('category_news_id', 2)->limit(9)->orderBy('created_at', 'desc')->get();
         $newsFarm = News::where('category_news_id', 1)->limit(9)->orderBy('created_at', 'desc')->get();
-        $newsFirst = News::where('category_news_id', 3)->orderBy('created_at', 'desc')->first();
-        $newsList = News::where('category_news_id', 3)->limit(5)->orderBy('created_at', 'desc')->get();
+        $newsFirst = News::orderBy('created_at', 'desc')->first();
+        $newsList = News::limit(5)->orderBy('created_at', 'desc')->get();
         return view('user.home', [
             'newsCompany' => $newsCompany,
             'newsFarm' => $newsFarm,

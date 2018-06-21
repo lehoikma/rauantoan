@@ -6,7 +6,7 @@
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 16px; padding-left: 0px">
-                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tập Đoàn</button>
+                <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block; border-radius: 0px; border-color: snow">Tin Tức</button>
             </div>
         </div>
         <div style="margin-top: 20px">
@@ -23,7 +23,7 @@
                     <div class="post-meta clearfix">
                         <span class="posted-on" style="color: #aaaaaa; font-size: 12px">
                                 <span class="glyphicon glyphicon-calendar"></span>
-                                {{ date_format(date_create($newsFirst['created_at']), 'd/m/Y')}}
+                            {{ date_format(date_create($newsFirst['created_at']), 'd/m/Y')}}
                         </span>
                     </div>
                     <div style="margin-top: 10px">{{ strip_tags(substr($newsFirst['content'], 0,150)) }} ...</div>
@@ -49,7 +49,7 @@
                                 <div class="post-meta">
                                 <span class="posted-on" style="color: #aaaaaa; font-size: 12px">
                                     <span class="glyphicon glyphicon-calendar"></span>
-                                        {{ date_format(date_create($value['created_at']), 'd/m/Y')}}
+                                    {{ date_format(date_create($value['created_at']), 'd/m/Y')}}
                                 </span>
                                 </div>
                             </div><!-- .post-caption -->
@@ -94,7 +94,7 @@
             @endif
         @endforeach
     </div>
-    
+
     <div style="width: 100%; float: left">
         <div class="" style="width: 100%; margin-top: 30px">
             <div class="tin-tuc-title" style="border-bottom: 1px solid #d9d8d8; padding: 8px 0px;">
