@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://vadikom.github.io/smartmenus/src/css/sm-core-css.css">
+<link rel="stylesheet" type="text/css" href="https://vadikom.github.io/smartmenus/src/css/sm-blue/sm-blue.css">
+<script type="text/javascript" src="/js/menu.js"></script>
 <html>
 <head>
     <meta charset="utf-8">
@@ -24,98 +27,66 @@
         </div>
 
         <div class="custom-container" style="padding-top: 5px">
-            <nav role="navigation" class="navbar navbar-default" style="    margin-bottom: 0px;">
-                <div class="container top_nav">
-                    <div class="row">
-                        <div class="navbar-header">
-                            <button data-target="#myNavbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                                <span class="sr-only">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div id="myNavbar" class="navbar-collapse noPadding collapse" style="height: 1px;">
-                            <div class="menustyle _lg_fr">
-                                <ul id="primary-menu1" class="nav navbar-nav  sm menu-custom" data-smartmenus-id="1526812798300609"
-                                    style="font-size: 14px !important;;font-weight: 700;list-style: none; position: relative;">
-                                    <li>
-                                        <a class="menu-active" href="{{route('home')}}">Trang chủ</a>
-                                    </li>
+            <nav class="main-nav" role="navigation">
 
-                                    <li>
-                                        <a class="menu-active" href="{{route('introduce')}}">Giới Thiệu</a>
-                                        <ul class="sub-menu" style="padding: 0px">
-                                            <li>
-                                                <a href="{{route('introduce1')}}" style="border: none">
-                                                    Lịch Sử Hình Thành
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{route('introduce2')}}" style="border: none">
-                                                    Cơ Cấu Tổ Chức
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{route('introduce3')}}" style="border: none">
-                                                    Chức Năng, Nhiệm Vụ
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
-                                        <?php
-                                        $categoryNews = \App\Models\CategoriesNews::all();
-                                        ?>
-                                        <ul class="sub-menu" style="padding: 0px">
-                                            @foreach($categoryNews as $value)
-                                                <li>
-                                                    <a href="{{route('list_news_category',
+                <!-- Mobile menu toggle button (hamburger/x icon) -->
+                <input id="main-menu-state" type="checkbox">
+                <label class="main-menu-btn" for="main-menu-state">
+                    <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+                </label>
+                <!-- Sample menu definition -->
+                <ul id="main-menu" class="sm sm-blue">
+                    <li>
+                        <a class="menu-active" href="{{route('home')}}" style="color: #333333">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a class="menu-active" href="{{route('introduce')}}">Giới Thiệu</a>
+                    </li>
+                    <li><a class="menu-active" href="{{route('news_list')}}">Tin Tức</a>
+                        <?php
+                        $categoryNews = \App\Models\CategoriesNews::all();
+                        ?>
+                        <ul class="sub-menu" style="padding: 0px">
+                            @foreach($categoryNews as $value)
+                                <li>
+                                    <a href="{{route('list_news_category',
                                                     $value['id']
-                                                    )}}" style="border: none">
-                                                        {{$value['name']}}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
+                                                    )}}" style="border: none; color: #333333">
+                                        {{$value['name']}}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </li>
+                    <li><a class="menu-active" href="{{route('list_news_products')}}">Sản Phẩm</a>
+                        <?php
+                        $categoryProduct = \App\Models\CategoriesProduct::all();
+                        ?>
+                        <ul class="sub-menu" style="padding: 0px">
+                            @foreach($categoryProduct as $value)
+                                <li>
+                                    <a href="{{route('list_news_products_category', $value['id'])}}" style="border: none; color: #333333">
+                                        {{$value['name']}}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
 
-                                    <li>
-                                        <a class="menu-active" href="{{route('list_news_products')}}">Sản Phẩm</a>
-                                        <?php
-                                        $categoryProduct = \App\Models\CategoriesProduct::all();
-                                        ?>
-                                        <ul class="sub-menu" style="padding: 0px">
-                                            @foreach($categoryProduct as $value)
-                                                <li>
-                                                    <a href="{{route('list_news_products_category', $value['id'])}}" style="border: none">
-                                                        {{$value['name']}}
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a class="menu-active" href="{{route('videos')}}">Video</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-active" href="{{route('list_image')}}">Hình Ảnh</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-active" href="{{route('form_support')}}">Tư vấn </a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-active" href="{{route('contact')}}">Liên Hệ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <a class="menu-active" href="{{route('videos')}}">Video</a>
+                    </li>
+                    <li>
+                        <a class="menu-active" href="{{route('list_image')}}">Hình Ảnh</a>
+                    </li>
+                    <li>
+                        <a class="menu-active" href="{{route('form_support')}}">Tư vấn </a>
+                    </li>
+                    <li>
+                        <a class="menu-active" href="{{route('contact')}}">Liên Hệ</a>
+                    </li>
+                </ul>
             </nav>
-            </nav><!-- #site-navigation -->
 
         </div>
     </div>
@@ -208,10 +179,39 @@
       var href = window.location.href;
       $('a.menu-active').each(function(e,i) {
           if (href.indexOf($(this).attr('href')) >= 0) {
-              $('li.active').removeClass('active');
-              $(this).parent().addClass('active');
+              $('li a.active').removeClass('active');
+              $(this).addClass('active');
           }
       });
+  });
+
+  $(function() {
+      $('#main-menu').smartmenus({
+          subMenusSubOffsetX: 1,
+          subMenusSubOffsetY: -8
+      });
+  });
+
+  // SmartMenus mobile menu toggle button
+  $(function() {
+      var $mainMenuState = $('#main-menu-state');
+      if ($mainMenuState.length) {
+          // animate mobile menu
+          $mainMenuState.change(function(e) {
+              var $menu = $('#main-menu');
+              if (this.checked) {
+                  $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+              } else {
+                  $menu.show().slideUp(250, function() { $menu.css('display', ''); });
+              }
+          });
+          // hide mobile menu beforeunload
+          $(window).bind('beforeunload unload', function() {
+              if ($mainMenuState[0].checked) {
+                  $mainMenuState[0].click();
+              }
+          });
+      }
   });
 
 </script>
