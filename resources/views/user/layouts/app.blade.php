@@ -46,7 +46,7 @@
                         <?php
                         $categoryNews = \App\Models\CategoriesNews::all();
                         ?>
-                        <ul class="sub-menu" style="padding: 0px">
+                        <ul class="" style="padding: 0px">
                             @foreach($categoryNews as $value)
                                 <li>
                                     <a href="{{route('list_news_category',
@@ -62,7 +62,7 @@
                         <?php
                         $categoryProduct = \App\Models\CategoriesProduct::all();
                         ?>
-                        <ul class="sub-menu" style="padding: 0px">
+                        <ul class="" style="padding: 0px">
                             @foreach($categoryProduct as $value)
                                 <li>
                                     <a href="{{route('list_news_products_category', $value['id'])}}" style="border: none; color: #333333">

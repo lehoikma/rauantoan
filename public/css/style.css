@@ -387,12 +387,12 @@
 
 /* IGNORE: Unrelated generic demo styles */
 
-body {
-    margin: 8px;
-    background: #fff;
-    color: #aaa;
-    font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+/*body {*/
+    /*margin: 8px;*/
+    /*background: #fff;*/
+    /*color: #aaa;*/
+    /*font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+/*}*/
 
 .demo-text {
     margin: 3em 22px;
