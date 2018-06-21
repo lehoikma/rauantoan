@@ -15,17 +15,40 @@
         <h1 class="page-title" style="font-weight: 400; color: #c0d071">Sản Phẩm</h1>
     </header>
 
-    <div class="col-xs-12" style="padding-bottom: 15px;padding-right: 0px; padding-left: 0px;">
-        @foreach($category as $ctg)
-        <div class="mobile-category-product" style="margin-bottom: 10px;background: #f8f8f8;padding: 10px;padding-left: 3px;border-radius: 8px;">
-            <span class="glyphicon glyphicon-grain"></span>
+    @foreach($itemProduct as $value)
+        <div class="post-news" style="border-bottom: 1px solid #e1e1e1;padding-bottom: 20px;margin-bottom: 30px;">
 
-            <a href="{{route('list_news_products_category', $ctg['id'])}}">
-                <strong style="font-size: 18px;     text-transform: uppercase;">
-                    {{$ctg['name']}}
-                </strong>
-            </a>
+            <div class="entry-thumb">
+                <a class="thumb-zoom" href="{{route('detail_news_products',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
+                    <img style=" height: 400px" src="/upload/{{$value['image']}}" alt="">
+                </a>
+            </div>
+
+            <div class="entry-content">
+                <h3 class="entry-title">
+                    <a href="{{route('detail_news_products',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
+                        {{$value['title']}}
+                    </a>
+                </h3>
+                <div class="entry-meta">
+                <span class="posted-on">
+                    <a rel="bookmark">
+                        <span class="glyphicon glyphicon-calendar"></span><span>
+                            {{ date_format(date_create($value['created_at']), 'd/m/Y')}}
+                        </span>
+                    </a>
+                </span>
+                </div><!-- .entry-meta -->
+                <p style="margin-top: 15px">
+                    {{ strip_tags(substr($value['content'], 0,500)) }} ...
+                </p>
+                <a class="vmag-archive-more" href="{{route('detail_news_products',['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
+                    Xem thêm
+                </a>
+            </div><!-- .entry-content -->
         </div>
-        @endforeach
+    @endforeach
+    <div class="pagination-custom">
+        <?php echo $itemProduct->render(); ?>
     </div>
 @endsection

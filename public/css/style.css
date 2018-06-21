@@ -70,6 +70,10 @@
     .sm-blue a .sub-arrow {
         background: #4DB2EC;
     }
+    .entry-thumb a img {
+        width: 100% !important;
+        height: 260px !important;
+    }
 }
 .custom-container {
     max-width: 1070px;

@@ -1,6 +1,6 @@
 @extends('user.layouts.app')
 @section('title-web')
-    Lịch Sử Hình Thành
+    Giới Thiệu
 @endsection
 @section('content')
     <div class="vmag-breadcrumbs" style="margin-top: 15px">
@@ -9,11 +9,10 @@
     </span> >
         <span>
         Giới Thiệu
-    </span> >
-        <span class="current">Lịch Sử Hình Thành</span>
+    </span>
     </div>
     <h2 class="page-title" style="font-weight: 400; color: #c0d071;border-bottom: 1px solid #eee;padding-bottom: 10px;">
-        Lịch Sử Hình Thành
+        Giới Thiệu
     </h2>
     <div class="introduces">
         {!! $introduce['content'] !!}

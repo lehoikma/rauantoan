@@ -109,18 +109,10 @@
                         <span class="pull-right-container"></span>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-th"></i> <span>Giới Thiệu</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
+                <li>
+                    <a href="{{route('form_history1')}}">
+                        <i class="fa fa-briefcase"></i> <span> Giới Thiệu</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('form_history1')}}"><i class="fa fa-circle-o"></i> Lịch Sử Hình Thành</a></li>
-                        <li><a href="{{route('form_history2')}}"><i class="fa fa-circle-o"></i> Cơ Cấu Tổ Chức</a></li>
-                        <li><a href="{{route('form_history3')}}"><i class="fa fa-circle-o"></i> Chức Năng, Nhiệm Vụ</a></li>
-                    </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">

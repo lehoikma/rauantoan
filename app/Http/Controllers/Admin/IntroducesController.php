@@ -21,22 +21,6 @@ class IntroducesController extends Controller
         ]);
     }
 
-    public function formIntroduce2()
-    {
-        $data = Introduces::find(2);
-        return view('admin.form_introduce_2', [
-            'data' => $data
-        ]);
-    }
-
-    public function formIntroduce3()
-    {
-        $data = Introduces::find(3);
-        return view('admin.form_introduce_3', [
-            'data' => $data
-        ]);
-    }
-
     public function saveIntroduces(SaveIntroducesRequest $request)
     {
         $newsEdit = Introduces::where('id', $request['id'])

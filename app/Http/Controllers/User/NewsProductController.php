@@ -16,9 +16,9 @@ class NewsProductController extends Controller
      */
     public function listNewsProduct()
     {
-        $category = CategoriesProduct::all();
+        $itemProduct = ItemProduct::orderBy('id', 'desc')->paginate(15);
         return view('user.news_product_list',[
-            'category' => $category
+            'itemProduct' => $itemProduct
         ]);
     }
 

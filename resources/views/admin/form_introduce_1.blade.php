@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title-content')
-    Lịch Sử Hình Thành
+    Giới Thiệu
 @endsection
 @section('content')
     <div class="col-md-12 flash-message">
@@ -28,7 +28,7 @@
             </div>
 
             <div class=" col-md-8" style="margin-top: 20px">
-                <button type="submit" class="btn btn-primary"> Tạo, Sửa Lịch Sử</button>
+                <button type="submit" class="btn btn-primary"> Tạo, Sửa</button>
             </div>
         </form>
     </div>
