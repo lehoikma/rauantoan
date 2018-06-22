@@ -52,6 +52,8 @@
     }
     .item-news-custom {
         padding-top: 15px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
     .image img {
         width: 100% !important;
