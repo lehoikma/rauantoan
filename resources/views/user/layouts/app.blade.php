@@ -136,14 +136,14 @@
                     @endforeach
 
                 <div class="tin-tuc-title" style=" padding: 8px 16px; padding-left: 0px">
-                    <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">Phân Bón Doanh Nông</button>
+                    <button type="button" class="btn btn-success" style=" background: #c0d071; color: #fff;text-transform: uppercase; font-weight: 500; display: block;border-color: snow; border-radius: 0px;">THÀNH VIÊN DABACO GROUP</button>
                 </div>
-                <a href="http://phanbondoanhnong.com.vn/">
-                        <img src="/image/banner1.jpg" style="padding-bottom: 20px;width: 100%;">
-                    </a>
-                    <a href="http://phanbondoanhnong.com.vn/">
-                        <img src="/image/banner2.jpg" style="width: 100%;">
-                    </a>
+                    {{--<a href="http://phanbondoanhnong.com.vn/">--}}
+                        {{--<img src="/image/banner1.jpg" style="padding-bottom: 20px;width: 100%;">--}}
+                    {{--</a>--}}
+                    {{--<a href="http://phanbondoanhnong.com.vn/">--}}
+                        {{--<img src="/image/banner2.jpg" style="width: 100%;">--}}
+                    {{--</a>--}}
             </div>
         </div>
     </div>
